@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    #_fps_canvas {
+      position: fixed;
+      top: 9999px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="test" id="test">
+    test
+  </div>
+  <button onclick="clickAction()">点击</button>
+  <progress value="12" max="100"></progress>
+  <canvas id="_fps_canvas"></canvas>
+
+</body>
+<script>
+  const getCanvas = document.getElementById('_fps_canvas')
+  const ctx = getCanvas.getContext('2d')
+
+
+  function clickAction() {
+    // ctx.drawImage(document.documentElement, 0, 0)
+    ctx.drawImage(document.getElementById('test'), 0, 0)
+    const base = getCanvas.toDataUrl()
+    console.log(base, 'base');
+  }
+</script>
+
+</html>
