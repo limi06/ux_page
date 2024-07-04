@@ -1,1 +1,0 @@
-import{M as s,B as d}from"./mixColors-6594ec8f.js";import{T as p}from"./index-c2f74882.js";const c={};function l(o,n){let e=0;for(let r=0;r<n;r++)e=e*31+o[r].uid>>>0;return c[e]||a(o,e)}function a(o,n){const e={};let r=0;for(let t=0;t<s;t++){const i=t<o.length?o[t]:p.EMPTY.source;e[r++]=i.source,e[r++]=i.style}const u=new d(e);return c[n]=u,u}export{l as g};
